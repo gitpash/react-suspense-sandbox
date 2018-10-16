@@ -1,0 +1,17 @@
+{
+  "name": "react-suspense-sandbox",
+  "version": "1",
+  "main": "index.js",
+  "repository": "react-suspense-sandbox",
+  "author": "Luzanov Pavel <arklogin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel index.html --no-cache --no-autoinstall"
+  },
+  "dependencies": {
+    "async-react-future": "^0.0.11",
+    "react": "^16.6.0-alpha.8af6728",
+    "react-dom": "^16.6.0-alpha.8af6728",
+    "simple-cache-provider": "^0.10.0"
+  }
+}
