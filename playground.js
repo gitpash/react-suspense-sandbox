@@ -5,7 +5,7 @@ import {createCache, createResource} from 'simple-cache-provider';
 // create a cache where we can store loaded result from request
 const cache = createCache();
 
-const loadData = id => delay(1000, `${id}-value`);
+const loadData = id => delay(1000, `${id} was loaded`);
 // create an obj which React could read async when data will be loaded;
 const myResource = createResource(loadData);
 
@@ -21,9 +21,10 @@ function Susp() {
   return <div>{resultPromise}</div>;
 }
 function App() {
-  return <Susp />;
+  return (
+    <React.unstable_Suspense fallback='fetching your data...'>
+      <Susp />
+    </React.unstable_Suspense>
+  );
 }
 ReactDOM.render(<App />, document.getElementById('yay'));
-// <React.Placeholder fallback="loading...">
-//       <Susp />
-//     </React.Placeholder>
